@@ -11,9 +11,16 @@ function stringMasLarga(strings) {
   // stringMasLarga(['hi', 'hello', 'ni hao', 'guten tag']); debe retornar 'guten tag'
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
-  // Tu código aca
+  // Tu código aca:
+  let masLarga = strings[0];
+  
+  for(let i = 1; i < strings.length; i++){
+    if(strings[i].length > masLarga.length){
+      masLarga = strings[i];
+    }
+  }
+  return masLarga;
 }
-
 // No modifiques nada debajo de esta linea //
 
 module.exports = stringMasLarga
